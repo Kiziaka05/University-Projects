@@ -1,0 +1,3 @@
+﻿  lr proga3.cpp
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 3\lr proga3\lr proga3\lr proga3.cpp(5,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lr proga3.vcxproj -> C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 3\lr proga3\x64\Debug\lr proga3.exe
