@@ -1,0 +1,12 @@
+﻿  main.cpp
+C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(147,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(181,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(233,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(135,22): warning C4834: отмена возвращаемого значения функции с атрибутом "nodiscard"
+C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(183,21): message : выполняется компиляция ссылки на экземпляр шаблон функции "float testPriorityQueueSpeed<std::priority_queue<Data,std::vector<Data,std::allocator<Data>>,std::less<_Ty>>>(T &&)"
+          with
+          [
+              _Ty=Data,
+              T=std::priority_queue<Data,std::vector<Data,std::allocator<Data>>,std::less<Data>>
+          ]
+  main.vcxproj -> C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\x64\Debug\main.exe
