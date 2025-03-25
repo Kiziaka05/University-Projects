@@ -1,0 +1,16 @@
+﻿  main.cpp
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\main.cpp(59,37): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\main.cpp(60,37): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\main.cpp(62,42): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\main.cpp(63,42): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\main.cpp(69,38): warning C4244: аргумент: преобразование "const _Ty2" в "GLfloat", возможна потеря данных
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\main.cpp(69,25): warning C4244: аргумент: преобразование "const _Ty1" в "GLfloat", возможна потеря данных
+          with
+          [
+              _Ty1=double
+          ]
+  Project2.vcxproj -> C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 14\Project2\x64\Debug\Project2.exe
