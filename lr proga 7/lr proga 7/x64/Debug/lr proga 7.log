@@ -1,0 +1,3 @@
+﻿  lr proga 7.cpp
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 7\lr proga 7\lr proga 7\lr proga 7.cpp(33,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lr proga 7.vcxproj -> C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 7\lr proga 7\x64\Debug\lr proga 7.exe
