@@ -1,0 +1,14 @@
+﻿  ConsoleApplication5.cpp
+C:\Users\proto\Desktop\КПІ\АСД\лаба 6\ConsoleApplication5\ConsoleApplication5.cpp(24,44): warning C4244: +=: преобразование "double" в "__int64", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 6\ConsoleApplication5\ConsoleApplication5.cpp(27,33): warning C4244: +=: преобразование "double" в "__int64", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 6\ConsoleApplication5\ConsoleApplication5.cpp(84,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 6\ConsoleApplication5\ConsoleApplication5.cpp(89,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 6\ConsoleApplication5\ConsoleApplication5.cpp(124,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl Data::Data(void)" (??0Data@@QEAA@XZ) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl HashTable::HashTable(void)" (??0HashTable@@QEAA@XZ) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __cdecl HashTable::~HashTable(void)" (??1HashTable@@QEAA@XZ) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl HashTable::insert(__int64,struct Data)" (?insert@HashTable@@QEAAX_JUData@@@Z) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: struct Data * __cdecl HashTable::find(__int64)" (?find@HashTable@@QEAAPEAUData@@_J@Z) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: void __cdecl HashTable::erase(__int64)" (?erase@HashTable@@QEAAX_J@Z) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+ConsoleApplication5.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: int __cdecl HashTable::size(void)" (?size@HashTable@@QEAAHXZ) в функции "bool __cdecl testHashTable(void)" (?testHashTable@@YA_NXZ).
+C:\Users\proto\Desktop\КПІ\АСД\лаба 6\ConsoleApplication5\x64\Debug\ConsoleApplication5.exe : fatal error LNK1120: неразрешенных внешних элементов: 7
