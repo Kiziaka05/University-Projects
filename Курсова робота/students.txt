@@ -1,0 +1,3 @@
+Ivanov 87 FIOT 10
+Lysak 100 IASA 100
+Lysak 99 IASA 90
