@@ -1,0 +1,8 @@
+Numbers: 1111 2 3 4 
+Arithmetic Mean: 280
+Geometric Mean: 12.7785
+
+Numbers: 5 6 7 8 
+Arithmetic Mean: 6.5
+Geometric Mean: 6.40217
+
