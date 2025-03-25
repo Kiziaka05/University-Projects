@@ -1,0 +1,12 @@
+﻿  lr proga 8.cpp
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(15,21): warning C4477: "scanf_s": в строке форматирования "%s" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "size_t"
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(15,21): message : этот аргумент используется в качестве размера буфера
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(18,21): warning C4477: "scanf_s": в строке форматирования "%s" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "size_t"
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(18,21): message : этот аргумент используется в качестве размера буфера
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(55,17): warning C4477: "scanf_s": в строке форматирования "%s" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "size_t"
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(55,17): message : этот аргумент используется в качестве размера буфера
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(57,17): warning C4477: "scanf_s": в строке форматирования "%s" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "size_t"
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(57,17): message : этот аргумент используется в качестве размера буфера
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(65,13): warning C4477: "scanf_s": в строке форматирования "%s" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "size_t"
+C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\lr proga 8\lr proga 8.cpp(65,13): message : этот аргумент используется в качестве размера буфера
+  lr proga 8.vcxproj -> C:\Users\proto\Desktop\КПІ\програмування\лабораторна робота 8\lr proga 8\x64\Debug\lr proga 8.exe
