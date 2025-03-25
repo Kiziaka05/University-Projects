@@ -1,0 +1,9 @@
+﻿  lr proga 9.cpp
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(15,16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(26,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(33,25): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(127,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(127,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(136,29): warning C4244: =: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\lr proga 9.cpp(171,16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  lr proga 9.vcxproj -> C:\Users\proto\Desktop\КПІ\програмування\2 семестр\лабораторна робота 9\lr proga 9\x64\Debug\lr proga 9.exe
