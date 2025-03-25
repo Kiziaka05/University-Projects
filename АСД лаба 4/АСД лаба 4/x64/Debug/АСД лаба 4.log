@@ -1,0 +1,4 @@
+﻿  АСД лаба 4.cpp
+C:\Users\proto\Desktop\АСД лаба 4\АСД лаба 4\АСД лаба 4.cpp(80,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\АСД лаба 4\АСД лаба 4\АСД лаба 4.cpp(48): warning C4715: Stack::mytop: значение возвращается не при всех путях выполнения
+  АСД лаба 4.vcxproj -> C:\Users\proto\Desktop\АСД лаба 4\x64\Debug\АСД лаба 4.exe
