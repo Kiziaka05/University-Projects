@@ -1,0 +1,7 @@
+﻿  lr proga 5.cpp
+C:\Users\proto\Desktop\lr proga 5\lr proga 5\lr proga 5.cpp(5,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\lr proga 5\lr proga 5\lr proga 5.cpp(28,13): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+C:\Users\proto\Desktop\lr proga 5\lr proga 5\lr proga 5.cpp(28,13): message : заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
+C:\Users\proto\Desktop\lr proga 5\lr proga 5\lr proga 5.cpp(28,13): message : отсутствующий вариативный аргумент "2" требуется для строки форматирования "%c"
+C:\Users\proto\Desktop\lr proga 5\lr proga 5\lr proga 5.cpp(28,13): message : этот аргумент используется в качестве размера буфера
+  lr proga 5.vcxproj -> C:\Users\proto\Desktop\lr proga 5\x64\Debug\lr proga 5.exe
