@@ -1,0 +1,20 @@
+﻿  main.cpp
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(89,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(129,27): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(152,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(157,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(184,40): warning C4244: +=: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(213,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\BinarySearchTree.inl(467,23): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\BinarySearchTree.inl(451,1): message : во время компиляции функции-члена класс шаблон "int BinarySearchTree<Data>::findInRange(const T &,const T &)"
+          with
+          [
+              T=Data
+          ]
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(173,26): message : см. первую ссылку на "BinarySearchTree<Data>::findInRange" в "testBinarySearchTree"
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(121,28): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "BinarySearchTree<Data>"
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 352 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  main.vcxproj -> C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\x64\Release\main.exe

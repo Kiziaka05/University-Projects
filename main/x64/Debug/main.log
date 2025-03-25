@@ -1,12 +1,16 @@
 ﻿  main.cpp
-C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(147,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(181,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(233,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(135,22): warning C4834: отмена возвращаемого значения функции с атрибутом "nodiscard"
-C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\main.cpp(183,21): message : выполняется компиляция ссылки на экземпляр шаблон функции "float testPriorityQueueSpeed<std::priority_queue<Data,std::vector<Data,std::allocator<Data>>,std::less<_Ty>>>(T &&)"
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(89,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(129,27): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(152,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(157,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(184,40): warning C4244: +=: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(213,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\BinarySearchTree.inl(467,23): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\BinarySearchTree.inl(451,1): message : во время компиляции функции-члена класс шаблон "int BinarySearchTree<Data>::findInRange(const T &,const T &)"
           with
           [
-              _Ty=Data,
-              T=std::priority_queue<Data,std::vector<Data,std::allocator<Data>>,std::less<Data>>
+              T=Data
           ]
-  main.vcxproj -> C:\Users\proto\Desktop\КПІ\АСД\лаба 7\main\x64\Debug\main.exe
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(173,26): message : см. первую ссылку на "BinarySearchTree<Data>::findInRange" в "testBinarySearchTree"
+C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\main.cpp(121,28): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "BinarySearchTree<Data>"
+  main.vcxproj -> C:\Users\proto\Desktop\КПІ\АСД\лаба 8\main\x64\Debug\main.exe

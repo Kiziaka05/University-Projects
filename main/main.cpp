@@ -1,257 +1,218 @@
-﻿#include <queue>
+﻿
+#include "BinarySearchTree.h"
+#include <set>
+#include <vector>
+#include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <iostream>
-#include "PriorityQueue.h"
-#include "BinaryHeap.h"
-#include "Array.h"
-
-//варіант 2
+#include <cmath>
+#include <string>
 using namespace std;
+//варіант 2
 
-//сортування купою за спаданням
-struct HeapSort {
+string generateRandName() {
+    const int size = 20;
+    string Name[size] = { "Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace",
+        "Hannah", "Isaac", "Julia", "Kevin", "Linda", "Michael",
+        "Nancy", "Olivia", "Patrick", "Quinn", "Rachel", "Sam", "Tina" };
+    int index = rand() % 20;
+    return Name[index];
 
-  
-public:
-    //лівий і правий дочірній елемент
-    static int getLeftChild(int index)
-    {
-        return 2 * index + 1;
+}
+long long generateRandLong() {
+    long long size;
+    long long generetednum = 0;
+    long long num;
+    size = rand() % 5 + 11;
+    long long rozr = 1;
+    for (int i = 0; i < size; i++) {
+        num = rand() % 10;
+        generetednum += num * rozr;
+        rozr = rozr * 10;
     }
-    static int getRightChild(int index)
-    {
-        return 2 * index + 2;
-    }
+    return generetednum;
+}
 
-
-    //метод побудови купи з вихідного масиву
-    static void buildHeap(int* array, int arrSize) {
-        for (int i = arrSize / 2; i >= 0; --i) {
-            seftDown(array, arrSize, i);
-        }
-    }
-
-
-    //Просіювання вниз
-    static void seftDown(int* array, int arrSize, int index) {
-        int largest = index;
-        int leftChild = getLeftChild(index);
-        int rightChild = getRightChild(index);
-
-        if (leftChild < arrSize && array[leftChild] > array[largest])
-            largest = leftChild;
-
-        if (rightChild < arrSize && array[rightChild] > array[largest])
-            largest = rightChild;
-
-        if (largest != index) {
-            swap(array[index], array[largest]);
-            seftDown(array, arrSize, largest);
-        }
-    }
-
-
-    //Сортування масиву
-    static void heapSort(int* array, int arrSize) {
-        buildHeap(array, arrSize);
-        for (int i = arrSize - 1; i > 0; --i) {
-            swap(array[0], array[i]);
-            seftDown(array, i, 0);
-        }
-    }
-};
-
-//структура за завданням з перегруженими операторами
 struct Data {
-    int hp;
-    int skill;
-    int damagepoint;
-
-
+    string Name;
+    int AverageMark;
+    bool DesireToLearn;
+    int AmountofCopiedworks;
     Data() {
-        hp = rand()%101;
-        skill = rand() % 1001;
-        damagepoint = rand() % 1001;
+        Name = generateRandName();
+        AverageMark = rand() % 101;
+        AmountofCopiedworks = rand() % 1001;
     }
-
-
     bool operator<(const Data& other) const
     {
-        if (this->hp != other.hp) {
-            return hp < other.hp;
+        if (this->AverageMark != other.AverageMark) {
+            return AverageMark < other.AverageMark;
         }
-        if (this->skill != other.skill) {
-            return skill < other.skill;
+        if (this->DesireToLearn != other.DesireToLearn) {
+            return DesireToLearn < other.DesireToLearn;
         }
-        return damagepoint < other.damagepoint;
+        return AmountofCopiedworks < other.AmountofCopiedworks;
     }
 
 
     bool operator>(const Data& other) const
     {
-        if (this->hp != other.hp) {
-            return hp > other.hp;
+        if (this->AverageMark != other.AverageMark) {
+            return AverageMark > other.AverageMark;
         }
-        if (this->skill != other.skill) {
-            return skill > other.skill;
+        if (this->DesireToLearn != other.DesireToLearn) {
+            return DesireToLearn > other.DesireToLearn;
         }
-        return damagepoint > other.damagepoint;
+        return AmountofCopiedworks > other.AmountofCopiedworks;
     }
 
 
     bool operator==(const Data& other) const
     {
-        return (this->hp == other.hp &&
-            this->skill == other.skill && this->damagepoint == other.damagepoint);
+        return (this->AverageMark == other.AverageMark &&
+            this->DesireToLearn == other.DesireToLearn && this->AmountofCopiedworks == other.AmountofCopiedworks);
     }
 
 
     friend std::ostream& operator<< (std::ostream& out, const Data& data) {
 
-        out << " Bot( " << data.hp << ", " << data.skill << ", " << data.damagepoint << ") ";
+        out << " Student( " << data.Name<<" has average mark of "<< data.AverageMark << " ,and his desire to learn is " << data.DesireToLearn << " ,and he has " << data.AmountofCopiedworks << " copied works) ";
 
         return out;
     };
 
+
 };
 
-
-//тестування швидкості
-template <typename T>
-float testPriorityQueueSpeed(T&& priorityQueue)
-{
-    const int iters = 200000;
-
-    clock_t timeStart = clock();
-    for (int i = 0; i < iters; i++)
-    {
-        int insertDataAmount = rand() % 6 + 5;
-        for (int j = 0; j < insertDataAmount; j++)
-        {
-            priorityQueue.push(Data());
-        }
-
-        priorityQueue.top();
-        priorityQueue.pop();
-    }
-    clock_t timeEnd = clock();
-    float time = (float(timeEnd - timeStart)) / CLOCKS_PER_SEC;
-
-    return time;
-}
-
-//тестування приорітетної черги 
-bool testPriorityQueue()
+bool testBinarySearchTree()
 {
     srand(time(NULL));
 
-    const int iters = 20000;
+    const int iters = 80000;
+    const int keysAmount = iters * 2;
+    const int itersToRangeQueries = 1000;
 
-    PriorityQueue<Data> myPriorQueue;
-    priority_queue<Data> stlPriorQueue;
+    vector<Data> data(keysAmount);
 
-    bool isDataEqual = true;
+    vector<Data> dataToInsert(iters);
+    vector<Data> dataToErase(iters);
+    vector<Data> dataToFind(iters);
+    vector<pair<Data, Data>> dataToRangeQueries;
+
     for (int i = 0; i < iters; i++)
     {
-        int insertDataAmount = rand() % 6 + 5;
-        for (int j = 0; j < insertDataAmount; j++)
-        {
-            Data randData = Data();
-            myPriorQueue.push(randData);
-            stlPriorQueue.push(randData);
-        }
-
-        if (!(myPriorQueue.top() == stlPriorQueue.top()))
-        {
-            isDataEqual = false;
-            cerr << "Comparing failed on iteration " << i << endl << endl;
-            break;
-        }
-
-        int removeDataAmount = rand() % insertDataAmount;
-        for (int j = 0; j < removeDataAmount; j++)
-        {
-            myPriorQueue.pop();
-            stlPriorQueue.pop();
-        }
+        dataToInsert[i] = data[generateRandLong() % keysAmount];
+        dataToErase[i] = data[generateRandLong() % keysAmount];
+        dataToFind[i] = data[generateRandLong() % keysAmount];
     }
 
-    int myQueueSize = myPriorQueue.size();
-    int stlQueueSize = stlPriorQueue.size();
-
-    float stlTime = testPriorityQueueSpeed<priority_queue<Data>>(priority_queue<Data>());
-    float myTime = testPriorityQueueSpeed<PriorityQueue<Data>>(PriorityQueue<Data>());
-
-    cout << "My PriorityQueue:" << endl;
-    cout << "Time: " << myTime << ", size: " << myQueueSize << endl;
-    cout << "STL priority_queue:" << endl;
-    cout << "Time: " << stlTime << ", size: " << stlQueueSize << endl << endl;
-
-    if (isDataEqual && myQueueSize == stlQueueSize)
+    for (int i = 0; i < itersToRangeQueries; i++)
     {
-        cout << "The lab is completed" << endl << endl;
+        Data minData = Data();
+        Data maxData = Data();
+
+        if (maxData < minData)
+        {
+            swap(minData, maxData);
+        }
+        dataToRangeQueries.push_back({ minData, maxData });
+    }
+
+    BinarySearchTree<Data> myTree;
+    clock_t myStart = clock();
+    for (int i = 0; i < iters; i++)
+    {
+        myTree.insert(dataToInsert[i]);
+    }
+    int myInsertSize = myTree.size();
+    int myTreeHeight = myTree.height();
+    int optimalTreeHeight = log2(myInsertSize) + 1;
+    for (int i = 0; i < iters; i++)
+    {
+        myTree.erase(dataToErase[i]);
+    }
+    int myEraseSize = myInsertSize - myTree.size();
+    int myFoundAmount = 0;
+    for (int i = 0; i < iters; i++)
+    {
+        if (myTree.find(dataToFind[i]))
+        {
+            myFoundAmount++;
+        }
+    }
+    clock_t myEnd = clock();
+    float myTime = (float(myEnd - myStart)) / CLOCKS_PER_SEC;
+
+    set<Data> stlTree;
+    clock_t stlStart = clock();
+    for (int i = 0; i < iters; i++)
+    {
+        stlTree.insert(dataToInsert[i]);
+    }
+    int stlInsertSize = stlTree.size();
+    for (int i = 0; i < iters; i++)
+    {
+        stlTree.erase(dataToErase[i]);
+    }
+    int stlEraseSize = stlInsertSize - stlTree.size();
+    int stlFoundAmount = 0;
+    for (int i = 0; i < iters; i++)
+    {
+        if (stlTree.find(dataToFind[i]) != stlTree.end())
+        {
+            stlFoundAmount++;
+        }
+    }
+    clock_t stlEnd = clock();
+    float stlTime = (float(stlEnd - stlStart)) / CLOCKS_PER_SEC;
+
+    clock_t myRangeStart = clock();
+    int myRangeFoundAmount = 0;
+    for (int i = 0; i < itersToRangeQueries; i++)
+    {
+      myRangeFoundAmount += myTree.findInRange(dataToRangeQueries[i].first, dataToRangeQueries[i].second);
+    }
+    clock_t myRangeEnd = clock();
+    float myRangeTime = (float(myRangeEnd - myRangeStart)) / CLOCKS_PER_SEC;
+
+    clock_t stlRangeStart = clock();
+    int stlRangeFoundAmount = 0;
+    for (int i = 0; i < itersToRangeQueries; i++)
+    {
+        const auto& low = stlTree.lower_bound(dataToRangeQueries[i].first);
+        const auto& up = stlTree.upper_bound(dataToRangeQueries[i].second);
+        stlRangeFoundAmount += distance(low, up);
+    }
+    clock_t stlRangeEnd = clock();
+    float stlRangeTime = (float(stlRangeEnd - stlRangeStart)) / CLOCKS_PER_SEC;
+
+    cout << "My BinaryTree: height = " << myTreeHeight << ", optimal height = " << optimalTreeHeight << endl;
+    cout << "Time: " << myTime << ", size: " << myInsertSize << " - " << myEraseSize << ", found amount: " << myFoundAmount << endl;
+    cout << "Range time: " << myRangeTime << ", range found amount: " << myRangeFoundAmount << endl << endl;
+    cout << "STL Tree:" << endl;
+    cout << "Time: " << stlTime << ", size: " << stlInsertSize << " - " << stlEraseSize << ", found amount: " << stlFoundAmount << endl;
+    cout << "Range time: " << stlRangeTime << ", range found amount: " << stlRangeFoundAmount << endl << endl;
+
+    if (myInsertSize == stlInsertSize && myEraseSize == stlEraseSize &&
+        myFoundAmount == stlFoundAmount && myRangeFoundAmount == stlRangeFoundAmount)
+    {
+        cout << "The lab is completed" << endl;
         return true;
     }
 
-    cerr << ":(" << endl << endl;
+    cerr << ":(" << endl;
     return false;
 }
 
-//тестування сортування купою
-void testtime() {
-
-    const int iters = 200000;
-
-    int arr[iters];
-    int j = 1;
-    for (int i = 0; i < iters; i++)
-    {
-       
-        arr[i] =j;
-        j++;
-       
-    }
-    clock_t timeStart = clock();
-    HeapSort heap;
-    heap.heapSort(arr, iters);
-    clock_t timeEnd = clock();
-    float time = (float(timeEnd - timeStart)) / CLOCKS_PER_SEC;
-    cout << "My HeapSort time " << time << endl;
-    clock_t timeStart1 = clock();
-    sort(arr, arr + iters);
-    clock_t timeEnd1 = clock();
-    float time1 = (float(timeEnd1 - timeStart1)) / CLOCKS_PER_SEC;
-    cout << "STL sort time " << time1;
 
 
-}
 
 
-int main() {
- srand(time(NULL));
- /* BinaryHeap<Data>Myheap;
-    Dynamicarray<Data> Myarray;
-  
-    for (int i = 0; i < 10; i++) {
-        Data randdata = Data();
-        cout << randdata;
-        Myheap.insert(randdata);
-    }
-    int size=Myarray.mysize();
-    cout << size;
-    Myarray.myget(1);
-    Myarray.mypop();
-   
-    Myheap.printHeap();
-    Myheap.remove_top();
-    cout << endl;
-    Myheap.printHeap();*/
+int main()
+{
+    srand(time(NULL));
+    testBinarySearchTree();
+    
 
-    testPriorityQueue();
-
-    testtime();
-  
-    return 0;
 }
 
